@@ -1,20 +1,25 @@
-Oracle Java OpenJDK on Docker
+Oracle Java OpenJDK in Containers
 =====
-This repository contains sample Docker configurations to facilitate installation and environment setup for DevOps users. This project includes Dockerfiles for Oracle OpenJDK based on Oracle Linux.
+This repository contains sample container configurations to facilitate installation and environment setup for DevOps users. This project includes Dockerfiles for Oracle OpenJDK based on Oracle Linux.
 
 ## Building the Oracle Java OpenJDK base image
-Navigate to the folder containing the Dockerfile and run docker build, tagging the image with the version number:
+Navigate to the folder containing the Dockerfile and run `docker build`, tagging the image with the version number:
 
-e.g. for OpenJDK 15 run
+e.g. for OpenJDK 19 run
 ```
-$ cd ../OracleOpenJDK/15
-$ docker build -t oracle/openjdk:15 .
+$ cd ../OracleOpenJDK/19
+$ docker build -t oracle/openjdk:19 .
 ```
 
 This command is already scripted in build.sh so you can alternatively run:
 ```
 $ bash build.sh
 ```
+
+### Parent image OS version
+
+The Oracle Java images for OpenJDK 19 uses `oraclelinux:8` as the default parent image.
+
 
 ## License
 The OpenJDK compressed archive used by this Dockerfile is available under the [GNU General Public License, version2, with the Classpath Exception](https://openjdk.java.net/legal/gplv2+ce.html), from the [Oracle OpenJDK website](https://jdk.java.net).
